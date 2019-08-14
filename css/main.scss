@@ -1,0 +1,104 @@
+@import 'bootstrap_scss/bootstrap-grid';
+@import 'bootstrap_scss/bootstrap-reboot';
+
+$font-family: 'Open Sans', sans-serif;
+$font-size: 18px;
+$font-color: rgba(0, 37, 46, 1);
+$line-height: 28px;
+$device-mobile: 768px;
+
+@mixin box-shadow($property) {
+  -webkit-box-shadow: $property;
+  -moz-box-shadow: $property;
+  box-shadow: $property;
+}
+
+/* custom css */
+
+body {
+	font-family: $font-family;
+	font-size: $font-size;
+	color: $font-color;
+	line-height: $line-height;
+}
+
+.button {
+	display: inline-block;
+	background-color: rgba(255, 82, 191, 1);
+	font-size: 0.8rem;
+	line-height: 1rem;
+	font-weight: 700;
+	padding: 1rem 5rem;
+	color: rgba(235, 251, 255, 1);
+	border-radius: 1.5rem;
+
+	@include box-shadow( 0px 1px 5px 0px rgba(194,194,194,1));
+
+	&:hover {
+		text-decoration: none;
+		color: rgba(235, 251, 255, 1);
+		@include box-shadow( 1px 2px 7px 0px rgba(194,194,194,1));
+	}
+}
+
+.text-right { text-align: right; }
+
+.break { display: block; }
+
+.heading {
+	font-family: 'Poppins', sans-serif;
+	font-size: 2rem;
+	color: $font-color;
+	line-height: 3rem;
+	margin: 0px 0px 20px;
+	padding: 0;
+}
+
+p { margin-bottom: 1.5rem; }
+
+.img-fluid {
+	max-width: 100%;
+	height: auto;
+}
+
+.v-center {
+	display: table;
+	height: 100%;
+
+	div {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+
+
+.intro {
+	width: 100%;
+	height: 100vh;
+	background-image: url('../images/bg-hero-desktop.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	header {
+		padding: 60px 0px;
+
+		.button {
+			color: $font-color;
+			background-color: rgba(255, 255, 255, 1);
+
+			&:hover {
+				color: $font-color;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: $device-mobile) {
+	
+	.intro {
+		background-image: url('../images/bg-hero-mobile.svg');
+	}
+
+}
