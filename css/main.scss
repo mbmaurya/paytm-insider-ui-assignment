@@ -5,7 +5,8 @@ $font-family: 'Open Sans', sans-serif;
 $font-size: 18px;
 $font-color: rgba(0, 37, 46, 1);
 $line-height: 28px;
-$device-mobile: 768px;
+$device-tab: 992px;
+$device-mobile: 576px;
 
 @mixin box-shadow($property) {
   -webkit-box-shadow: $property;
@@ -30,7 +31,7 @@ body {
 	font-weight: 700;
 	padding: 1rem 5rem;
 	color: rgba(235, 251, 255, 1);
-	border-radius: 1.5rem;
+	border-radius: 2rem;
 
 	@include box-shadow( 0px 1px 5px 0px rgba(194,194,194,1));
 
@@ -103,15 +104,15 @@ p { margin-bottom: 1.5rem; }
 }
 
 .cta {
-	margin-bottom: 5rem;
+	margin-bottom: -4rem;
 
 	.cta-box {
 		width: 650px;
 	    margin: 0 auto 0;
 	    text-align: center;
 	    padding: 2.5rem 1.5rem;
-	    border: 1px solid;
 	    border-radius: 0.5rem;
+	    background-color: #ffffff;
 
 	    .button {
 	    	padding: 1.5rem 6rem;
@@ -120,17 +121,138 @@ p { margin-bottom: 1.5rem; }
 	}
 }
 
-
-footer {
-	padding: 10rem 0;
-	background-color: rgba(0, 37, 46, 1);
-	color: #ffffff;
+%absolute-content {
+  	position: absolute;
+    left: -2rem;
 }
 
-@media screen and (max-width: $device-mobile) {
+footer {
+	padding: 10rem 0 3rem;
+	background-color: rgba(0, 37, 46, 1);
+	color: #ffffff;
+
+	ul {
+		list-style-type: none;
+
+		li {
+			position: relative;
+			margin-top: 1.5rem;
+			font-size: 1rem;
+			a {
+				color: #ffffff;
+
+				&:hover {
+					color: rgba(235, 251, 255, 1);
+				}
+			}
+		}		
+	}
+
+	.contact {
+		li:nth-child(1):before {
+			@extend %absolute-content;
+			content: url('../images/icon-location.svg');
+		}
+		li:nth-child(2):before {
+			@extend %absolute-content;
+			content: url('../images/icon-phone.svg');
+		}
+		li:nth-child(3):before {
+			@extend %absolute-content;
+			content: url('../images/icon-email.svg');
+		}
+		li {
+			font-size: 0.9rem;
+			line-height: 1.5rem;
+		}
+	}
+
+	ul.social-links {
+		li {
+			display: inline-block;
+			margin-right: 1rem;
+			img {
+				width: 32px;
+			}
+		}
+	}
+
+	.copyright {
+		text-align: right;
+		font-size: 0.8rem;
+		margin-bottom: 0;
+	}
+}
+
+@media screen and (max-width: $device-tab) {
 	
 	.intro {
 		background-image: url('../images/bg-hero-mobile.svg');
+		text-align: center;
+		height: auto;
+		padding-bottom: 1.5rem;
+		a {
+			margin-bottom: 1.5rem;
+		}
 	}
 
+	.heading {
+		text-align: center;
+	}
+
+	.feature-1, .feature-2, .feature-3 {
+		padding: 5rem 0;
+		p {
+			text-align: center;
+		}
+		.heading {
+			margin-top: 2rem;
+		}
+	}
+
+	.cta {
+		.cta-box {
+			width: 90%;
+		}
+	}
+
+	footer {
+		ul {
+			li {
+				margin-top: 1rem;
+			}
+		}
+		.col-lg-2 {
+			ul {
+				padding-left: 0;
+				margin-bottom: 0;
+			}
+		}
+		.social-links {
+			margin-top: 1.5rem;
+			padding-left: 0;
+			text-align: center;
+		}
+		.copyright {
+			text-align: center;
+		}
+	}
+
+}
+
+@media screen and (max-width: $device-mobile) {
+	.intro {
+		a {
+			display: none;
+		}
+	}
+
+	.cta {
+		.cta-box {
+			.button {
+				font-size: 0.8rem;
+				padding: 1rem 1rem;
+			}
+		}
+	}
 }
