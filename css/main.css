@@ -3496,7 +3496,8 @@ p {
 
 footer .contact li:nth-child(1):before, footer .contact li:nth-child(2):before, footer .contact li:nth-child(3):before {
   position: absolute;
-  left: -2rem; }
+  left: -2rem;
+  top: 0.2rem; }
 
 footer {
   padding: 10rem 0 3rem;
@@ -3565,6 +3566,10 @@ footer {
   footer .copyright {
     text-align: center; } }
 @media screen and (max-width: 576px) {
+  .heading {
+    font-size: 1.5rem;
+    line-height: 2rem; }
+
   .intro a {
     display: none; }
 

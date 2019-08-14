@@ -124,6 +124,7 @@ p { margin-bottom: 1.5rem; }
 %absolute-content {
   	position: absolute;
     left: -2rem;
+    top: 0.2rem;
 }
 
 footer {
@@ -241,11 +242,16 @@ footer {
 }
 
 @media screen and (max-width: $device-mobile) {
-	.intro {
+	.heading {
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
+
+	.intro {		
 		a {
 			display: none;
 		}
-	}
+	}	
 
 	.cta {
 		.cta-box {
