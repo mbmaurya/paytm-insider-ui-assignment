@@ -254,6 +254,10 @@ footer {
 				width: 32px;
 			}
 		}
+
+		li:last-child {
+			margin-right: 0;
+		}
 	}
 
 	.copyright {
@@ -319,6 +323,12 @@ footer {
 				margin-top: 1rem;
 			}
 		}
+		.footer-logo {
+			width: 50%;
+		}
+		.contact {
+			margin-bottom: 1.5rem;			
+		}
 		.col-lg-2 {
 			ul {
 				padding-left: 0;
@@ -326,7 +336,8 @@ footer {
 			}
 		}
 		.social-links {
-			margin-top: 1.5rem;
+			margin-top: 5rem;
+			margin-bottom: 1rem;
 			padding-left: 0;
 			text-align: center;
 		}
@@ -350,18 +361,39 @@ footer {
 		padding-bottom: 4rem;
 	}
 
-	.heading {
-		font-size: 1.5rem;
-		line-height: 2rem;
+	.intro header {
+		padding: 30px 0px 80px;
 	}
 
-	.logo { padding-top: 10px; }
+	.heading {
+		font-size: 2rem;
+    	line-height: 3rem;
+	}
+
+	.logo { 
+		padding-top: 10px;     
+		width: 70%; 
+	}
 
 	header {
 		.button {
-			padding: 1rem 2rem;
+			padding: 0.5rem 2rem;
 		}
 	}	
+
+	.content {
+		.v-center {
+			p {
+			    font-size: 1.3rem;
+			    line-height: 2rem;
+			    margin-bottom: 2rem;
+			}
+
+			.button {
+				margin-bottom: 2rem;
+			}
+		}
+	}
 
 	.cta {
 		.cta-box {
