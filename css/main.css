@@ -117,7 +117,7 @@ p {
     margin: 0 auto 0;
     text-align: center;
     padding: 2.5rem 1.5rem;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     background-color: #ffffff; }
     .cta .cta-box .button {
       padding: 1.5rem 6rem;
@@ -194,7 +194,7 @@ footer {
     margin: 2rem;
     padding: 2rem;
     background-color: #ffffff;
-    border-radius: 2.3rem;
+    border-radius: 1.5rem;
     -webkit-box-shadow: 1px 0px 5px 0px #f7f7f7;
     -moz-box-shadow: 1px 0px 5px 0px #f7f7f7;
     box-shadow: 1px 0px 5px 0px #f7f7f7; }
@@ -204,8 +204,8 @@ footer {
       margin-top: 2rem; }
 
   .cta .cta-box {
-    width: 90%;
-    border-radius: 2.3rem;
+    width: 80%;
+    border-radius: 1.5rem;
     -webkit-box-shadow: 1px 0px 5px 0px #f7f7f7;
     -moz-box-shadow: 1px 0px 5px 0px #f7f7f7;
     box-shadow: 1px 0px 5px 0px #f7f7f7; }
@@ -223,7 +223,7 @@ footer {
     text-align: center; } }
 @media screen and (max-width: 576px) {
   .feature-1, .feature-2, .feature-3 {
-    margin: 1rem;
+    margin: 1.5rem 1rem;
     padding: 1rem; }
 
   .heading {
